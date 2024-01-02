@@ -1,9 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Controller : MonoBehaviour
 {
+    
     public Rigidbody rb;
     public float jumpingSpeed = 10;
     public float movementSpeed = 5f; // Kullanýcýdan alýnan girdi ile x ekseninde hareket hýzý
@@ -13,6 +15,11 @@ public class Controller : MonoBehaviour
         Transform transform = gameObject.transform;
         transform.rotation = Quaternion.Euler(-90, 0, 174);
         rb.freezeRotation = true;
+    }
+
+    private void Awake()
+    {
+        
     }
 
     void Update()
