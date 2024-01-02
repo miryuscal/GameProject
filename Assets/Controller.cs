@@ -10,6 +10,7 @@ public class Controller : MonoBehaviour
 
     void Start()
     {
+        Transform transform = gameObject.transform;
         transform.rotation = Quaternion.Euler(-90, 0, 174);
         rb.freezeRotation = true;
     }
@@ -34,7 +35,14 @@ public class Controller : MonoBehaviour
             Debug.Log("Do something else here");
             Jump();
         }
+        else if (collision.gameObject.tag == "Rusty")
+        {
+            transform.position = new Vector3(-7.4f, 0.36f, -0.52f);
+        }
     }
+
+    
+
 
     private void Jump()
     {
