@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.InputSystem;
 
 public class Controller : MonoBehaviour
 {
@@ -12,6 +13,8 @@ public class Controller : MonoBehaviour
 
     void Start()
     {
+
+       
         Transform transform = gameObject.transform;
         transform.rotation = Quaternion.Euler(-90, 0, 174);
         rb.freezeRotation = true;
@@ -53,8 +56,7 @@ public class Controller : MonoBehaviour
     }
 
     
-
-
+    
     private void Jump()
     {
         rb.velocity = new Vector3(0, jumpingSpeed, 0);
