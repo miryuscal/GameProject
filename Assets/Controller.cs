@@ -46,6 +46,10 @@ public class Controller : MonoBehaviour
         {
             transform.position = new Vector3(-7.4f, 0.36f, -0.52f);
         }
+        else if (collision.gameObject.tag == "Finish")
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        }
     }
 
     
