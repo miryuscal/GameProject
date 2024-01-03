@@ -16,4 +16,9 @@ public class Menu : MonoBehaviour
         Application.Quit();
     }
 
+    public void NextScene()
+    {
+        SceneManager.LoadSceneAsync(2);
+    }
+
 }
